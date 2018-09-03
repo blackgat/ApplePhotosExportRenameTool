@@ -10,6 +10,7 @@
         <Button x:Name="BtnTarget" Content="Select Target Folder" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="149" Click="BtnTarget_Click"/>
         <TextBox x:Name="TextBoxTargetFolder" HorizontalAlignment="Left" Height="23" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="497"/>
         <Button x:Name="BtnExecute" Content="Execute" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="75" Click="BtnExecute_Click"/>
+        <ListBox x:Name="ListBoxMessages" HorizontalAlignment="Left" Height="223" Margin="10,86,0,0" VerticalAlignment="Top" Width="497"/>
 
     </Grid>
 </Window>
