@@ -167,6 +167,7 @@ namespace ApplePhotoExportFolderRenameTool
 
         private void BtnCorrectDate_Click(object sender, RoutedEventArgs e)
         {
+            UiLog("BtnCorrectDate_Click");
             Task.Run(() =>
             {
                 var directories = Directory.GetDirectories(_selectedPath);
@@ -184,6 +185,7 @@ namespace ApplePhotoExportFolderRenameTool
 
                             foreach (var fileEntry in fileEntries)
                             {
+                                UiLog($"Parsing \"{fileEntry}\"...");
                                 exifToolWrapper.Run(fileEntry);
 
                                 if (exifToolWrapper.HasExifData())
@@ -192,6 +194,7 @@ namespace ApplePhotoExportFolderRenameTool
 
                                     if (target != null)
                                     {
+                                        UiLog($"Updating \"{fileEntry}\"...");
                                         var createDate = DateTime.ParseExact(target.Value, "yyyy:MM:dd HH:mm:ss.FFF", null);
                                         File.SetCreationTime(fileEntry, createDate);
                                         File.SetLastAccessTime(fileEntry, DateTime.Now);
@@ -201,7 +204,12 @@ namespace ApplePhotoExportFolderRenameTool
                                     }
                                 }
                             }
+
                             UiLog($"Finished {fileEntries.Length} files in {Path.GetFileName(directory)}");
+                        }
+                        else
+                        {
+                            UiLog($"Do not found ExifTool.");
                         }
                     }
                     catch (Exception exception)
