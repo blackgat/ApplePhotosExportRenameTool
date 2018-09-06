@@ -8,9 +8,10 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button x:Name="BtnTarget" Content="Select Target Folder" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="149" Click="BtnTarget_Click"/>
-        <TextBox x:Name="TextBoxTargetFolder" HorizontalAlignment="Left" Height="23" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="TextBoxTargetFolder" Height="23" Margin="10,34,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="BtnExecute" Content="Execute" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="75" Click="BtnExecute_Click"/>
-        <ListBox x:Name="ListBoxMessages" HorizontalAlignment="Left" Height="223" Margin="10,86,0,0" VerticalAlignment="Top" Width="497"/>
+        <Button x:Name="BtnCorrectDate" Content="Correct Date" HorizontalAlignment="Left" Margin="90,62,0,0" VerticalAlignment="Top" Width="94" Click="BtnCorrectDate_Click"/>
+        <ListBox x:Name="ListBoxMessages" Margin="10,86,10,10"/>
 
     </Grid>
 </Window>
