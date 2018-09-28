@@ -1,5 +1,5 @@
 # ApplePhotosExportRenameTool
-Buid Status: [![Build status](https://ci.appveyor.com/api/projects/status/bguy7wrtrmulm6bt/branch/master?svg=true)](https://ci.appveyor.com/project/blackgat/applephotosexportrenametool/branch/master)
+Buid Status: [![Build status](https://ci.appveyor.com/api/projects/status/bguy7wrtrmulm6bt?svg=true)](https://ci.appveyor.com/project/blackgat/applephotosexportrenametool)
 
 ***
 ### objective
